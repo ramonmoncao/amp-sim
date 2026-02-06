@@ -7,8 +7,10 @@
   <MAINGROUP id="PKNVfA" name="juce-amp">
     <GROUP id="{FAC84CBD-5BBB-BD61-69E7-CF9E4E1781AE}" name="Source">
       <GROUP id="{CBDE9514-B6C8-2C7F-0623-F2EAC1AF681F}" name="Amplifier">
-        <FILE id="eHl0pW" name="WDFamp.cpp" compile="1" resource="0" file="Source/WDFamp.cpp"/>
-        <FILE id="Ba32Eu" name="WDFamp.h" compile="0" resource="0" file="Source/WDFamp.h"/>
+        <FILE id="KeZxA4" name="ToneStack.cpp" compile="1" resource="0" file="Source/ToneStack.cpp"/>
+        <FILE id="eNSfrd" name="ToneStack.h" compile="0" resource="0" file="Source/ToneStack.h"/>
+        <FILE id="eHl0pW" name="WDFPreAmp.cpp" compile="1" resource="0" file="Source/WDFPreAmp.cpp"/>
+        <FILE id="Ba32Eu" name="WDFPreAmp.h" compile="0" resource="0" file="Source/WDFPreAmp.h"/>
       </GROUP>
       <FILE id="KdCr5i" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
