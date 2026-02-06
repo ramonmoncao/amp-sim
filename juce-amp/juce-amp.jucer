@@ -3,9 +3,13 @@
 <JUCERPROJECT id="zAGnui" name="juce-amp" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" pluginFormats="buildStandalone,buildVST3"
               companyWebsite="github.com/ramonmoncao" companyName="ramonmoncao"
-              headerPath="C:\Users\Ramon\SDKs\onnxruntime\include&#10;C:\Users\Ramon\SDKs\chowdsp_wdf">
+              headerPath="C:\Users\Ramon\SDKs\onnxruntime\include&#10;C:\Users\Ramon\SDKs\chowdsp_wdf\include&#10;">
   <MAINGROUP id="PKNVfA" name="juce-amp">
     <GROUP id="{FAC84CBD-5BBB-BD61-69E7-CF9E4E1781AE}" name="Source">
+      <GROUP id="{CBDE9514-B6C8-2C7F-0623-F2EAC1AF681F}" name="Amplifier">
+        <FILE id="eHl0pW" name="WDFamp.cpp" compile="1" resource="0" file="Source/WDFamp.cpp"/>
+        <FILE id="Ba32Eu" name="WDFamp.h" compile="0" resource="0" file="Source/WDFamp.h"/>
+      </GROUP>
       <FILE id="KdCr5i" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="yqp73v" name="PluginProcessor.h" compile="0" resource="0"
