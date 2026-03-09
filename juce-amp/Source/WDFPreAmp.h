@@ -10,6 +10,7 @@
 
 #pragma once
 #include <chowdsp_wdf/chowdsp_wdf.h>
+#include "TriodeNN.h"
 
 namespace wdft = chowdsp::wdft;
 
@@ -21,13 +22,15 @@ struct StageVoltages {
 class WDFPreAmp 
 {
 public:
-    void prepare(double sampleRate);
-	inline StageVoltages processStageU1(double sample);
-	inline StageVoltages processStageU2(double sample);
-	inline double processPreOut(double sample);
-	inline double process(double sample);
+	void prepare(double sampleRate);
+	void reset();
+	StageVoltages processStageU1(double sample);
+	StageVoltages processStageU2(double sample);
+	double processPreOut(double sample);
+	double process(double sample);
 
 private:
+	TriodeNN triodeNN;
 
     //U1 stage
     wdft::ResistorT<double> r6{ 6.8e4 }; //68K resistor

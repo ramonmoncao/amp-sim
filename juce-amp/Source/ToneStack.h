@@ -16,7 +16,8 @@ class WDFToneStack
 {
 public:
 	void prepare(double sampleRate);
-	inline double process(double sample);
+	void reset();
+	double process(double sample);
 private:
 
 	wdft::ResistorT<double> r17{ 1.0e4 }; //10K resistor

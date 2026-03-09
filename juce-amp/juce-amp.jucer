@@ -3,12 +3,18 @@
 <JUCERPROJECT id="zAGnui" name="juce-amp" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" pluginFormats="buildStandalone,buildVST3"
               companyWebsite="github.com/ramonmoncao" companyName="ramonmoncao"
-              headerPath="C:\Users\Ramon\SDKs\onnxruntime\include&#10;C:\Users\Ramon\SDKs\chowdsp_wdf\include&#10;">
+              headerPath="..\..\ThirdParty\chowdsp_wdf\include&#10;..\..\ThirdParty\cppflow\include&#10;..\..\ThirdParty\tensorflow_c\include&#10;&#10;"
+              maxBinaryFileSize="20971520">
   <MAINGROUP id="PKNVfA" name="juce-amp">
     <GROUP id="{FAC84CBD-5BBB-BD61-69E7-CF9E4E1781AE}" name="Source">
       <GROUP id="{CBDE9514-B6C8-2C7F-0623-F2EAC1AF681F}" name="Amplifier">
+        <FILE id="TRKJk4" name="model.ort" compile="0" resource="0" file="Source/model.ort"/>
         <FILE id="KeZxA4" name="ToneStack.cpp" compile="1" resource="0" file="Source/ToneStack.cpp"/>
         <FILE id="eNSfrd" name="ToneStack.h" compile="0" resource="0" file="Source/ToneStack.h"/>
+        <FILE id="cJ2pen" name="triode_model.onnx" compile="0" resource="0"
+              file="Source/triode_model.onnx"/>
+        <FILE id="mAxCRJ" name="TriodeNN.cpp" compile="1" resource="0" file="Source/TriodeNN.cpp"/>
+        <FILE id="SkPKq3" name="TriodeNN.h" compile="0" resource="0" file="Source/TriodeNN.h"/>
         <FILE id="eHl0pW" name="WDFPreAmp.cpp" compile="1" resource="0" file="Source/WDFPreAmp.cpp"/>
         <FILE id="Ba32Eu" name="WDFPreAmp.h" compile="0" resource="0" file="Source/WDFPreAmp.h"/>
       </GROUP>
@@ -39,12 +45,16 @@
     <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
   </MODULES>
-  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"
+               JUCE_ASIO="1"/>
   <EXPORTFORMATS>
-    <VS2022 targetFolder="Builds/VisualStudio2022" externalLibraries="onnxruntime.lib">
+    <VS2022 targetFolder="Builds/VisualStudio2022" externalLibraries="tensorflow.lib"
+            extraLinkerFlags="&#10;">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug" libraryPath="C:\Users\Ramon\SDKs\onnxruntime\lib"/>
-        <CONFIGURATION isDebug="0" name="Release" libraryPath="C:\Users\Ramon\SDKs\onnxruntime\lib"/>
+        <CONFIGURATION isDebug="1" name="Debug" libraryPath="..\..\ThirdParty\tensorflow_c\lib"
+                       useRuntimeLibDLL="1"/>
+        <CONFIGURATION isDebug="0" name="Release" libraryPath="..\..\ThirdParty\tensorflow_c\lib"
+                       useRuntimeLibDLL="1"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_audio_basics" path="C:\Users\Ramon\JUCE\modules"/>

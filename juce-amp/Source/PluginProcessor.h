@@ -9,6 +9,8 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "WDFPreAmp.h"
+#include "ToneStack.h"
 
 //==============================================================================
 /**
@@ -54,6 +56,9 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
 
 private:
+	WDFPreAmp preAmp;
+	WDFToneStack toneStack;
+    bool isPrepared=false;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (JuceampAudioProcessor)
 };

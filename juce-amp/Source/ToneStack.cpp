@@ -15,7 +15,12 @@ void WDFToneStack::prepare(double sampleRate) {
     c7.prepare(sampleRate);
     c8.prepare(sampleRate);
 }
-inline double WDFToneStack::process(double sample) {
+void WDFToneStack::reset() {
+    c6.reset();
+    c7.reset();
+    c8.reset();
+}
+double WDFToneStack::process(double sample) {
 
     vs.setVoltage(sample);
     vs.incident(i1.reflected());
